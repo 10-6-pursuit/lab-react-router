@@ -12,6 +12,9 @@ export const PetsListNav = ({ cats, dogs }) => {
         <li>
           <Link to="/pets/dogs">See All Dogs ({dogs.length})</Link>
         </li>
+        <li>
+          <Link to="/pet_form">Add a Pet</Link>
+        </li>
       </ul>
     </nav>
   );
