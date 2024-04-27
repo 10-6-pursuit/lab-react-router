@@ -35,7 +35,7 @@ function App() {
             <Route path="/pets" element={<PetsList pets={pets} />}>
               <Route path="/pets/:kind" element={<PetsList pets={pets} />}/>
             </Route>
-            <Route path="/pet_form" element={<NewPet />} />
+            <Route path="/pet_form" element={<NewPet pets={pets}/>} />
           </Routes>
         <Footer />
       </div>

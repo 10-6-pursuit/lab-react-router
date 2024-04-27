@@ -1,4 +1,4 @@
-import { Link, useParams, useNavigate } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import React from "react";
 import PetsListNav from "./PetsListNav";
 import Pet from "./Pet";
