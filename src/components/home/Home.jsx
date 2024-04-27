@@ -2,6 +2,7 @@ import React from "react";
 import Highlights from "./Highlights";
 import NewsletterForm from "./NewsletterForm";
 import splashImage from "./andrew-s-unsplash.jpg";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 export const Home = ({ employees, owners, pets }) => {
