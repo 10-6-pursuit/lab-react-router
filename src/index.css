@@ -7,6 +7,10 @@
   --font-zen: "Zen Kaku Gothic Antique", sans-serif;
 }
 
+html {
+  overscroll-behavior: none;
+}
+
 body {
   color: var(--black);
   font-family: Helvetica, Arial, sans-serif;
