@@ -35,17 +35,21 @@ function App() {
             element={<Home employees={employees} owners={owners} pets={pets} />}
           />
           <Route path="/staff" element={<StaffList employees={employees} />} />
-          <Route path="/pets" element={<PetsList pets={pets} />} />
+          <Route path="/pets" element={<PetsList pets={pets}/>} />
           <Route
             path="/pets/cats"
             element={
-              <PetsList pets={pets.filter((pet) => pet.kind === "Cat")} />
+              <PetsList
+                pets={pets.filter((pet) => pet.kind === "Cat")}
+              />
             }
           />
           <Route
             path="/pets/dogs"
             element={
-              <PetsList pets={pets.filter((pet) => pet.kind === "Dog")} />
+              <PetsList
+                pets={pets.filter((pet) => pet.kind === "Dog")}
+              />
             }
           />
         </Routes>

@@ -1,8 +1,14 @@
 import React from "react";
 import "./PetsListNav.css";
 import { Link } from "react-router-dom";
+import { petData } from "/src/data/pets.js";
 
-export const PetsListNav = ({ cats, dogs }) => {
+
+export const PetsListNav = () => {
+  const cats = petData.filter((pet) => pet.kind === "Cat");
+  const dogs = petData.filter((pet) => pet.kind === "Dog");
+
+
   return (
     <nav className="pets-nav">
       <ul>
