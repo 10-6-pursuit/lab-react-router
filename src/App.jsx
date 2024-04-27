@@ -10,6 +10,7 @@ import Footer from "./components/common/Footer";
 import Home from "./components/home/Home";
 import StaffList from "./components/staff/StaffList";
 import PetsList from "./components/pets/PetsList";
+import { NotFound } from "./components/NotFound.jsx";
 
 /*
   Data
@@ -52,6 +53,7 @@ function App() {
               />
             }
           />
+          <Route path="*" element={<NotFound />}/>
         </Routes>
         <Footer />
       </Router>
