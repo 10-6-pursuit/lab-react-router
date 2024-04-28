@@ -1,14 +1,14 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 /*
   Components
 */
-import Nav from "./components/common/Nav";
 import Footer from "./components/common/Footer";
+import Nav from "./components/common/Nav";
 import Home from "./components/home/Home";
-import StaffList from "./components/staff/StaffList";
 import PetsList from "./components/pets/PetsList";
+import StaffList from "./components/staff/StaffList";
 
 /*
   Data
@@ -18,6 +18,7 @@ import PetsList from "./components/pets/PetsList";
 import { employeeData } from "./data/employees.js";
 import { ownerData } from "./data/owners";
 import { petData } from "./data/pets";
+import NewPet from "./components/pets/NewPet.jsx";
 
 function App() {
   const [employees] = useState(employeeData);
@@ -25,13 +26,20 @@ function App() {
   const [pets] = useState(petData);
 
   return (
-    <div className="wrapper">
-      <Nav />
-      <Home employees={employees} owners={owners} pets={pets} />
-      <StaffList employees={employees} />
-      <PetsList pets={pets} />
-      <Footer />
-    </div>
+    <Router>
+      <div className="wrapper">
+        <Nav />
+          <Routes>
+            <Route path="/" element={<Home employees={employees} owners={owners} pets={pets} />} />
+            <Route path="/staff" element={<StaffList employees={employees} />} />
+            <Route path="/pets" element={<PetsList pets={pets} />}>
+              <Route path="/pets/:kind" element={<PetsList pets={pets} />}/>
+            </Route>
+            <Route path="/pet_form" element={<NewPet pets={pets}/>} />
+          </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
