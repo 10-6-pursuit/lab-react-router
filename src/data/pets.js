@@ -22,7 +22,7 @@ export const petData = [
   },
   {
     id: "s7xFnQQ",
-    name: "Grey Fox",
+    name: "Pickles",
     kind: "Cat",
     breed: "Siamese",
     employeeId: "z7GIN_i",
