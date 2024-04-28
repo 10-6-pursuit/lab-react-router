@@ -10,13 +10,14 @@ import Footer from "./components/common/Footer";
 import Home from "./components/home/Home";
 import StaffList from "./components/staff/StaffList";
 import PetsList from "./components/pets/PetsList";
-import { NotFound } from "./components/NotFound.jsx";
+import PageNotFound from  "./components/common/PageNotFound.jsx"
 
 /*
   Data
   ---------------
   Note: Normally this data would be pulled from an API. It is not necessary, however, for this application.
 */
+
 import { employeeData } from "./data/employees.js";
 import { ownerData } from "./data/owners";
 import { petData } from "./data/pets";
@@ -36,24 +37,25 @@ function App() {
             element={<Home employees={employees} owners={owners} pets={pets} />}
           />
           <Route path="/staff" element={<StaffList employees={employees} />} />
-          <Route path="/pets" element={<PetsList pets={pets}/>} />
+          <Route path="/pets" element={<PetsList pets={pets} />} />
           <Route
             path="/pets/cats"
             element={
-              <PetsList
-                pets={pets.filter((pet) => pet.kind === "Cat")}
-              />
+              <PetsList pets={pets.filter((pet) => pet.kind === 'Cat')} />
             }
           />
           <Route
             path="/pets/dogs"
             element={
-              <PetsList
-                pets={pets.filter((pet) => pet.kind === "Dog")}
-              />
+              <PetsList pets={pets.filter((pet) => pet.kind === 'Dog')} />
             }
           />
-          <Route path="*" element={<NotFound />}/>
+          <Route
+            path="*"
+            element={
+              <PageNotFound />
+            }
+          />
         </Routes>
         <Footer />
       </Router>
