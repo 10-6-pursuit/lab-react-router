@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 export default function NewPet ({pets}) {
   const [petData, setPetData] = useState(pets)
   //Need form for name, kind, breed, and generate a unique id
@@ -27,7 +28,7 @@ export default function NewPet ({pets}) {
     setNewPet({
       ...newPet,
       [e.target.id]: e.target.value
-    })
+    });
   }
 
   function resetForm(){
@@ -42,19 +43,18 @@ export default function NewPet ({pets}) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    handleInput();
-    resetForm();
     setPetData({
       ...petData,
-      newPet
+      newPet,
     })
+    resetForm();
   }
+  console.log(newPet);
   console.log(petData);
 
-  console.log(newPet);
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="Name"></label>
+      <label htmlFor="Name">Name</label>
       <input 
       type="text" 
       id="name" 
@@ -64,14 +64,14 @@ export default function NewPet ({pets}) {
       onChange={handleInput}
       required/>
 
-      <label htmlFor="kind"></label>
+      <label htmlFor="kind">Kind</label>
       <select name="kind" id="kind" value={newPet.kind} onChange={handleInput} required>
-        <option disabled>Select Kind</option>
+        <option value="">Select Kind</option>
         <option value="dog">Dog</option>
         <option value="cat">Cat</option>
       </select>
 
-      <label htmlFor="breed"></label>
+      <label htmlFor="breed">Breed</label>
       <input 
       type="text" 
       id="breed" 
