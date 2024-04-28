@@ -6,10 +6,10 @@ export const PetsListNav = ({ cats, dogs }) => {
     <nav className="pets-nav">
       <ul>
         <li>
-          <a href="/pets/cats">See All Cats ({cats.length})</a>
+          <a  href="/pets/cats">See All Cats ({cats.length})</a>
         </li>
         <li>
-          <a href="/pets/dogs">See All Dogs ({dogs.length})</a>
+          <a  href="/pets/dogs">See All Dogs ({dogs.length})</a>
         </li>
       </ul>
     </nav>

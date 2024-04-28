@@ -1,6 +1,7 @@
 import React from "react";
 import Staffer from "./Staffer";
 import "./StaffList.css";
+<Route path="/staff" component={StaffList} /> // does this line need to be removed?
 
 export const StaffList = ({ employees }) => {
   const staff = employees.map((employee) => (

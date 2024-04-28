@@ -1,5 +1,6 @@
 import React from "react";
 import "./Nav.css";
+<Link to="/staff">All Staff</Link>
 
 function Nav() {
   return (
