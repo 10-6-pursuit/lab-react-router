@@ -15,7 +15,7 @@ export const PetsList = ({ pets }) => {
   
   return (
     <section className="pets-wrapper">
-      <PetsListNav cats={cats} dogs={dogs} />
+      <PetsListNav />
           <section className="pets-list">
             {/* All cats section */}
             {cats.map((cat) => (

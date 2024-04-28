@@ -1,6 +1,7 @@
 import React from "react";
 import "./PetsListNav.css";
 import { Link } from 'react-router-dom';
+import { petData } from "../../data/pets";
 
 
 export const PetsListNav = () => {
