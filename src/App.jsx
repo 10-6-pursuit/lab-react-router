@@ -20,7 +20,6 @@ import { ownerData } from "./data/owners";
 import { petData } from "./data/pets";
 import NewPet from "./components/pets/NewPet.jsx";
 
-
 function App() {
   const [employees] = useState(employeeData);
   const [owners] = useState(ownerData);

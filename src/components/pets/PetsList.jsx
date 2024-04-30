@@ -13,7 +13,7 @@ export const PetsList = ({ pets }) => {
   useEffect(() => {
     if(!kind) {
       navigate("/pets/cats")
-    }
+    } 
   }, [])
 
   const [cats, dogs] = pets.reduce(
