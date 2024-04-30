@@ -18,6 +18,8 @@ import StaffList from "./components/staff/StaffList";
 import { employeeData } from "./data/employees.js";
 import { ownerData } from "./data/owners";
 import { petData } from "./data/pets";
+import NewPet from "./components/pets/NewPet.jsx";
+
 
 function App() {
   const [employees] = useState(employeeData);
@@ -34,6 +36,7 @@ function App() {
             <Route path="/pets" element={<PetsList pets={pets} />}>
               <Route path="/pets/:kind" element={<PetsList pets={pets} />}/>
             </Route>
+            <Route path="/pet_form" element={<NewPet />} />
           </Routes>
         <Footer />
       </div>

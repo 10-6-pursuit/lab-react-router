@@ -1,4 +1,4 @@
-import { Link, useParams, useNavigate } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import React from "react";
 import PetsListNav from "./PetsListNav";
 import Pet from "./Pet";
@@ -7,6 +7,7 @@ import { useEffect } from "react";
 
 export const PetsList = ({ pets }) => {
   const navigate = useNavigate();
+  
   let {kind} = useParams();
 
   useEffect(() => {
@@ -17,11 +18,11 @@ export const PetsList = ({ pets }) => {
 
   const [cats, dogs] = pets.reduce(
     (acc, pet) => {
-      const position = pet.kind === "Cat" ? 0 : 1;
-      acc[position].push(pet);
-      return acc;
+      const position = pet.kind === "Cat" ? 0 : 1; //position value is determined by weather the current value is a Cat kind or Dog kind
+      acc[position].push(pet); //if the pet is Cat kind, it will be pushed into the 0 index subarray, Dog kind will be pushed into the 1 index subarray
+      return acc; //accumulator return for next iteration
     },
-    [[], []]
+    [[], []] //initial value is an array of 2 empty subarray
   );
   // console.log(kind);
   
