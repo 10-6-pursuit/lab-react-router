@@ -23,20 +23,20 @@ export default function NewPet () {
 
   console.log(newPet);
   return (
-    <form action="">
-      <label htmlFor="Name"></label>
-      <input type="text" id="name" name="name" placeholder="Enter pet name..." required/>
-
-      <label htmlFor="kind"></label>
-      <select name="kind" id="kind" required>
-        <option disabled>Select Kind</option>
-        <option value="dog">Dog</option>
-        <option value="cat">Cat</option>
-      </select>
-
-      <label htmlFor="breed"></label>
-      <input type="text" id="breed" name="breed" placeholder="Enter breed..." required/>
-      <button>Submit</button>
-    </form>
+    <div className="newPet__">
+      <form action="">
+        <label htmlFor="Name"></label>
+        <input type="text" id="name" name="name" placeholder="Enter pet name..." required/>
+        <label htmlFor="kind"></label>
+        <select name="kind" id="kind" required>
+          <option disabled>Select Kind</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+        </select>
+        <label htmlFor="breed"></label>
+        <input type="text" id="breed" name="breed" placeholder="Enter breed..." required/>
+        <button>Submit</button>
+      </form>
+    </div>
   )
 }
