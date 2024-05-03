@@ -9,6 +9,7 @@ import Nav from "./components/common/Nav";
 import Home from "./components/home/Home";
 import PetsList from "./components/pets/PetsList";
 import StaffList from "./components/staff/StaffList";
+import NotFound from "./components/common/NotFound.jsx";
 
 /*
   Data
@@ -36,6 +37,7 @@ function App() {
               <Route path="/pets/:kind" element={<PetsList pets={pets} />}/>
             </Route>
             <Route path="/pet_form" element={<NewPet />} />
+            <Route path="/pets/not_found" element={<NotFound />} />
           </Routes>
         <Footer />
       </div>

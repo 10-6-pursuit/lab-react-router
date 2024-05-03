@@ -16,6 +16,12 @@ export const PetsList = ({ pets }) => {
     } 
   }, [])
 
+  useEffect(() => {
+    if(kind === "birds") {
+      navigate("/pets/not_found")
+    } 
+  }, [])
+
   const [cats, dogs] = pets.reduce(
     (acc, pet) => {
       const position = pet.kind === "Cat" ? 0 : 1; //position value is determined by weather the current value is a Cat kind or Dog kind

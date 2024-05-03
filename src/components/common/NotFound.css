@@ -1,0 +1,8 @@
+.notFound {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 1.5em;
+    span {
+        font-size: 8em;
+    }
+}
