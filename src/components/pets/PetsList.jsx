@@ -12,21 +12,20 @@ export const PetsList = ({ pets }) => {
     },
     [[], []]
   );
-
+  
   return (
     <section className="pets-wrapper">
-      <PetsListNav cats={cats} dogs={dogs} />
-      <section className="pets-list">
-        {/* All cats section */}
-        {cats.map((cat) => (
-          <Pet key={cat.id} kind="cat" pet={cat} />
-        ))}
-
-        {/* All dogs section */}
-        {dogs.map((dog) => (
-          <Pet key={dog.id} kind="dog" pet={dog} />
-        ))}
-      </section>
+      <PetsListNav />
+          <section className="pets-list">
+            {/* All cats section */}
+            {cats.map((cat) => (
+              <Pet key={cat.id} kind="cat" pet={cat} />
+            ))}
+            {/* All dogs section */}
+            {dogs.map((dog) => (
+              <Pet key={dog.id} kind="dog" pet={dog} />
+            ))}
+          </section>
     </section>
   );
 };
