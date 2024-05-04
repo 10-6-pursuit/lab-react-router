@@ -7,4 +7,9 @@
 
 .pets-list {
   margin: 0 25px;
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: 450px;
 }
+
